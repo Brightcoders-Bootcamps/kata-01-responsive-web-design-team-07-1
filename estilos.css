@@ -70,6 +70,7 @@
 h1{
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    flex: 50%
 }
 
 h2 {
@@ -112,8 +113,10 @@ p{
 .working{
     clip-path: inset(0 25% 0 0);
     zoom: 65%;
-    display: block;
+    flex: 50%
 }
+
+
 .containerSubheader{
     display: flex;
     flex-direction: column;
@@ -134,10 +137,18 @@ p{
     padding: .5rem;
     margin-top: 4rem;    
     height: 7rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: .6rem;
     background-color: hsl(257, 27%, 26%);
+    
 }
+
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
 .cards{
     background-color: #eff1f7;
     padding: 1rem;
@@ -237,10 +248,10 @@ h3 {
     font-size: 100%;
 }
 
-/* .input-shorted, .boost-get{
+ .input-shorted, .boost-get{
     background-image: url("./images/bg-boost-desktop.svg");
     background-repeat: no-repeat;
-} */
+} 
 
 .linea{
     margin-top: 1574px;
@@ -260,4 +271,260 @@ h3 {
     left: 50%;
     margin-left: -3px;
     top: 0;
+}
+
+@media (min-width: 376px){
+
+    .logo{
+        margin-top: 50px;
+        margin-left: 100px;
+        height: 35px;
+    }
+
+    .button{
+        margin-left: 2rem;
+        margin-right: 100px;
+        padding: .7rem;
+        width: 150px;
+    }
+    .button:hover{
+        background-color:  hsl(180, 52%, 76%);
+    }
+    .icon:hover{
+        background-color:  hsl(180, 52%, 76%);
+    }
+    .button2:hover{
+        background-color:  hsl(180, 52%, 76%);
+    }
+    .button-started:hover{
+        background-color:  hsl(180, 52%, 76%);
+    }
+    .menu{
+        display: none;
+    }
+    
+    .navMenu{ 
+        font-weight: bold;
+        height: 3rem;
+        width: 75rem;
+        text-align: center; 
+        padding-top: 2rem;
+        color:gray;
+        border-radius: 1rem;  
+        list-style: none;
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;        
+    }
+    .navmenu ul{        
+        display:flex;
+        padding:0;
+        list-style-type:10px;
+        margin-left:10px;
+        align-items:center;
+    }
+
+     .navMenu li{
+        margin-left:40px;
+        display: inline;
+        font-size: 15px;
+    }
+
+    h1, .working{
+        flex: 100%
+    }
+
+    h1{
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+    }
+
+    p{
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+    }
+
+    .button-started{
+        padding: 0;
+        
+    }
+
+    .working{
+        clip-path: inset(0 0 0 0);
+        justify-content: left;
+    }
+
+    .text-subheader{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerSubheader{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+    }
+    .title{
+        font-size: 4rem;
+        margin-left: 4rem;
+    }
+    .subtitle{
+        font-size: 15px;
+    }
+    .subtitle2{
+        font-size: 1.5rem;
+        color: hsl(0, 0%, 75%);
+        
+    }
+    .img-subheader{
+        order: 1;
+    }
+
+    .button-started {    
+        background-color:hsl(180, 66%, 49%);
+        border-radius: 2rem;
+        color: white;
+        border: none;
+        padding: 14px 34px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        align-self: flex-start;
+        margin-left: 10rem;
+    }
+
+    .container-footer{
+        color:  hsl(0, 0%, 75%);
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-color:  hsl(255, 11%, 22%);
+    }
+        
+    .footer-list{
+        color: white;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        margin-right: 30px;
+    }
+    .middleFooter{
+        display: flex;
+    }
+    .bar{
+        display: none;
+    }
+        
+    
+    .form-inline{
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-control{
+        width: 73rem;
+        height: 3rem;
+        border: none;
+    }
+    .button-input{
+        width: 12rem;
+        height: 3rem;
+    }
+    .button2{
+        height: 3rem;
+        border-radius: 2rem;
+    }
+    .shortly-footer{
+        padding-top: 1rem;
+    }
+    .card{
+        width: 25%;
+        
+    }
+    .cards{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -100px;
+    }
+
+    /*.cards > .card{
+        margin-top: 1000px;
+    }*/
+
+    .card:nth-child(2){
+        margin-top: 100px;
+    }
+
+    .card:nth-child(3){
+        margin-top: 200px;
+    }
+
+    .header{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .input-shorted{
+        width: 980px;
+        padding: 35px;
+        margin-left: 10%;
+        border: none;
+        margin-top: 13%;
+        position: absolute;
+    }
+
+    .containerSubheader2{
+        margin-top: 20%;
+    }
+    
+    .title{
+    margin-top: 20%;
+    }
+
+    .boost-get{
+        padding-top: 100px;
+    }
+    .booster{
+        margin-top: -56px;
+        font-size: 2.5rem;
+    }
+
+    .button2{
+        margin-bottom: 5px;
+    }
+
+    .linea{
+        transform:rotate(90deg);
+        margin-top: 1643px;
+        margin-left: -221px;
+        border-left: 6px solid hsl(180, 66%, 49%);
+        height: 77px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+    }
+
+    .linea2{
+        transform:rotate(90deg);
+        margin-top: 1643px;
+        margin-left: 213px;
+        border-left: 6px solid hsl(180, 66%, 49%);
+        height: 77px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+    }
+
+  
 }

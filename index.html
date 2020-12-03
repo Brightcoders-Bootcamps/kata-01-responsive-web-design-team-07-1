@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="./estilos.css">
   
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -17,34 +15,36 @@
 <body>
 <div class="header">
   <div class="mobileMenu">
-    <img src="./images/logo.svg" alt="">    
+    <img src="./images/logo.svg" alt="" class="logo">    
     <img class="menu" src="./images/menu.svg" alt="" id="menu" onclick="mostrar()">
   </div>
   <ul class="navMenu" id="navMenu">
     <div>
-      <li class="element">Features</li>
-      <li class="element">Pricing</li>
-      <li class="element">Resources</li>
+      <li class="element" id="featureNavMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Features</li>
+      <li class="element" id="pricingNavMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Pricing</li>
+      <li class="element" id="resourcesNavMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Resources</li>
       <hr  class="bar">
     </div>
     <div class="navBottom">
-      <li class="element">Login</li>
+      <li class="element" id="loginMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Login</li>
       <input type="submit" value="Sign up" class="button">
     </div>
   </ul>
   
 </div>
 
-<img src="./images/illustration-working.svg" alt="" id="working" class="working">
-
 <div class="containerSubheader">
-  
-  <h1 class="title">More than just</br>shorter links</h1>
-  <p class="subtitle">
-    Build your brand’s recognition and</br>get detailed insights 
-  on how your</br>links are performing.
-  </p>
-  <input type="submit" value="Get Started" class="button-started">
+  <div class="img-subheader">
+    <img src="./images/illustration-working.svg" alt="" id="working" class="working">
+  </div>
+  <div class="text-subheader">
+    <h1 class="title">More than just</br>shorter links</h1>
+    <p class="subtitle2">
+      Build your brand’s recognition and</br>get detailed insights 
+    on how your</br>links are performing.
+    </p>
+    <input type="submit" value="Get Started" class="button-started" minlength="1">
+  </div>
 </div>
 
 <div class="input-shorted">
@@ -102,18 +102,15 @@
   </div>
 </div>
 
-
 <div class="boost-get">
   <h2 class="booster">Boost your links today</h2>
   <button type="button" class="button2" >Get Started</button>
 </div>
 
-<footer>
-    
-  <div class="container-footer">
-    
-     <img src="./images/logo-footer.svg" style="background-color: transparent;">
-     
+<footer>    
+  <div class="container-footer">    
+     <img src="./images/logo-footer.svg" style="background-color: transparent;" class="shortly-footer">     
+     <div class="middleFooter">
      <ul class="footer-list">
       <li class="i" style="font-weight: bold;">Features</li>
       <li class="i">Link Shortening</li>
@@ -135,6 +132,7 @@
       <li class="i">Careers</li> 
       <li class="i">Contact</li> 
      </ul>
+    </div>
      <ul class="iconList">
        <li><img src="./images/icon-facebook.svg" alt="" class="icon"></li>
        <li><img src="./images/icon-twitter.svg" alt="" class="icon"></li>

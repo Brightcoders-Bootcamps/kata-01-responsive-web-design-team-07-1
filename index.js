@@ -3,6 +3,7 @@ const working = document.getElementById('working')
 const form_control = document.getElementById('form-control')
 const linea = document.getElementById('linea')
 const linea2 = document.getElementById('linea2')
+const featureNavMenu = document.getElementById('featureNavMenu')
 
 function mostrar() {
     if(navMenu.style.display == "") {
@@ -20,4 +21,14 @@ function mostrar() {
 
 function cortar() {
     console.log("form_control")
+}
+
+function changeColorNavMenu(id) {
+    const elemento = document.getElementById(id)
+    elemento.style.color = "black"
+}
+
+function backColorNavMenu(id) {
+    const elemento = document.getElementById(id)
+    elemento.style.color = "grey"
 }
