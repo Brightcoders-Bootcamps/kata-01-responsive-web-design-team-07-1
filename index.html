@@ -20,13 +20,13 @@
   </div>
   <ul class="navMenu" id="navMenu">
     <div>
-      <li class="element" id="featureNavMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Features</li>
-      <li class="element" id="pricingNavMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Pricing</li>
-      <li class="element" id="resourcesNavMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Resources</li>
+      <li class="element" id="featureNavMenu">Features</li>
+      <li class="element" id="pricingNavMenu">Pricing</li>
+      <li class="element" id="resourcesNavMenu">Resources</li>
       <hr  class="bar">
     </div>
     <div class="navBottom">
-      <li class="element" id="loginMenu" onmousemove="changeColorNavMenu(id)" onmouseout="backColorNavMenu(id)">Login</li>
+      <li class="element" id="loginMenu">Login</li>
       <input type="submit" value="Sign up" class="button">
     </div>
   </ul>
@@ -51,9 +51,10 @@
   <form class="form-inline" role="form">
     <div class="form-group"></div>
       <input type="text" class="form-control" placeholder="Shorten a link here..." id="form-control">
-      <button type="button" value="Shorten it!" class="button-input" onclick="cortar()">Shorten it!</button>    
+      <button type="button" value="Shorten it!" class="button-input" onclick="cortar()" id="form-button">Shorten it!</button>          
+      <p style="color:red; display:none; font-size: 1rem;" id="error">Please add a link!</p>   
     </div>
-  </form>
+  </form>  
 </div>
 
 
@@ -66,6 +67,9 @@
 
 <div class="linea" id="linea"></div>
 <div class="linea2" id="linea2"></div>
+
+
+
 <div class="cards">
   
   <div class="card">

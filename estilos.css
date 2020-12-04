@@ -109,10 +109,11 @@ p{
     padding: 14px 34px;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
+    margin-left: 4rem;
 }
 .working{
-    clip-path: inset(0 25% 0 0);
-    zoom: 65%;
+    clip-path: inset(0 0 0 0);
+    zoom: 80%;
     flex: 50%
 }
 
@@ -272,7 +273,9 @@ h3 {
     margin-left: -3px;
     top: 0;
 }
-
+.element:hover{
+    color: black;
+}
 @media (min-width: 376px){
 
     .logo{
@@ -302,7 +305,9 @@ h3 {
     .menu{
         display: none;
     }
-    
+    .element:hover{
+        color: black;
+    }
     .navMenu{ 
         font-weight: bold;
         height: 3rem;

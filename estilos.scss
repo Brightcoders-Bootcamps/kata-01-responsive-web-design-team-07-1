@@ -204,6 +204,9 @@ h3 {
     text-align: center;
     font-size: 100%;
 }
+.element:hover{
+    color: black;
+}
 @media(min-width: 376){
     .navMenu{
         font-weight: bold;
@@ -403,5 +406,8 @@ h3 {
 
     .button2{
         margin-bottom: 5px;
+    }
+    .element:hover{
+        color: black;
     }
 }

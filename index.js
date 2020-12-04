@@ -1,10 +1,11 @@
 const navMenu = document.getElementById('navMenu')
 const working = document.getElementById('working')
-const form_control = document.getElementById('form-control')
 const linea = document.getElementById('linea')
 const linea2 = document.getElementById('linea2')
 const featureNavMenu = document.getElementById('featureNavMenu')
-
+const form_control = document.getElementById('form-control')
+const form_button = document.getElementById('form-button')
+const error = document.getElementById('error')
 function mostrar() {
     if(navMenu.style.display == "") {
         navMenu.style.display = "flex"
@@ -20,15 +21,24 @@ function mostrar() {
 }
 
 function cortar() {
-    console.log("form_control")
-}
+    var text =  `https://api.shrtco.de/v2/shorten?url=${form_control.value}`  
+    const url = text
+    const http = new XMLHttpRequest()
 
-function changeColorNavMenu(id) {
-    const elemento = document.getElementById(id)
-    elemento.style.color = "black"
-}
+    http.open("GET", url)
+    http.send()
 
-function backColorNavMenu(id) {
-    const elemento = document.getElementById(id)
-    elemento.style.color = "grey"
+    if(text.length === 0){
+        form_control.style.border = "4px solid red"
+        error.style.display = "block"
+    }else if (text.length > 0 ){
+        form_control.style.border="none"
+        http.onreadystatechange = (e) => {  
+            if(http.responseText != ""){
+                var json = JSON.parse(http.responseText)
+                console.log(json.result.short_link)
+            }
+        }
+    } 
+   
 }
