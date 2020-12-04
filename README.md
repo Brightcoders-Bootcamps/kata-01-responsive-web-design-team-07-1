@@ -66,7 +66,8 @@ Feel free to use any workflow that you feel comfortable with. Below is a suggest
 
 ## Página web
 Agrega aquí un enlace a tu página web publicada.
-  
+- [Página web](https://epic-noyce-c26548.netlify.app/)
+
 ## Evaluación / Revisión
 
 - [ ] Cumplimiento de requerimientos funcionales

@@ -10,13 +10,13 @@ function mostrar() {
     if(navMenu.style.display == "") {
         navMenu.style.display = "flex"
         working.style.display = "none"
-        linea.style.marginTop = "1665px"
-        linea2.style.marginTop = "2053px"
+        linea.style.marginTop = "1600px"
+        linea2.style.marginTop = "1988px"
     } else{
         navMenu.style.display = ""
         working.style.display = "block"
-        linea.style.marginTop = "1574px"
-        linea2.style.marginTop = "1962px"
+        linea.style.marginTop = "1585px"
+        linea2.style.marginTop = "1973px"
     }
 }
 

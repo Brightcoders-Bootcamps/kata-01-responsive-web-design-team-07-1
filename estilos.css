@@ -255,7 +255,7 @@ h3 {
 } 
 
 .linea{
-    margin-top: 1574px;
+    margin-top: 1585px;
     border-left: 6px solid hsl(180, 66%, 49%);
     height: 100px;
     position: absolute;
@@ -265,7 +265,7 @@ h3 {
 }
 
 .linea2{
-    margin-top: 1962px;
+    margin-top: 1973px;
     border-left: 6px solid hsl(180, 66%, 49%);
     height: 100px;
     position: absolute;
@@ -452,6 +452,7 @@ h3 {
     .shortly-footer{
         padding-top: 1rem;
     }
+  
     .card{
         width: 25%;
         
@@ -462,6 +463,7 @@ h3 {
         align-items: center;
         margin-top: -100px;
     }
+  
 
     /*.cards > .card{
         margin-top: 1000px;

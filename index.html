@@ -1,155 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./estilos.css">
-  
+
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-<div class="header">
-  <div class="mobileMenu">
-    <img src="./images/logo.svg" alt="" class="logo">    
-    <img class="menu" src="./images/menu.svg" alt="" id="menu" onclick="mostrar()">
-  </div>
-  <ul class="navMenu" id="navMenu">
-    <div>
-      <li class="element" id="featureNavMenu">Features</li>
-      <li class="element" id="pricingNavMenu">Pricing</li>
-      <li class="element" id="resourcesNavMenu">Resources</li>
-      <hr  class="bar">
+  <div class="header">
+    <div class="mobileMenu">
+      <img src="./images/logo.svg" alt="" class="logo">
+      <img class="menu" src="./images/menu.svg" alt="" id="menu" onclick="mostrar()">
     </div>
-    <div class="navBottom">
-      <li class="element" id="loginMenu">Login</li>
-      <input type="submit" value="Sign up" class="button">
+    <ul class="navMenu" id="navMenu">
+      <div>
+        <li class="element" id="featureNavMenu">Features</li>
+        <li class="element" id="pricingNavMenu">Pricing</li>
+        <li class="element" id="resourcesNavMenu">Resources</li>
+        <hr class="bar">
+      </div>
+      <div class="navBottom">
+        <li class="element" id="loginMenu">Login</li>
+        <input type="submit" value="Sign up" class="button">
+      </div>
+    </ul>
+  </div>
+
+  <div class="containerSubheader">
+    <div class="img-subheader">
+      <img src="./images/illustration-working.svg" alt="" id="working" class="working">
     </div>
-  </ul>
-  
-</div>
-
-<div class="containerSubheader">
-  <div class="img-subheader">
-    <img src="./images/illustration-working.svg" alt="" id="working" class="working">
+    <div class="text-subheader">
+      <h1 class="title">More than just</br>shorter links</h1>
+      <p class="subtitle2">
+        Build your brand’s recognition and</br>get detailed insights
+        on how your</br>links are performing.
+      </p>
+      <input type="submit" value="Get Started" class="button-started" minlength="1">
+    </div>
   </div>
-  <div class="text-subheader">
-    <h1 class="title">More than just</br>shorter links</h1>
-    <p class="subtitle2">
-      Build your brand’s recognition and</br>get detailed insights 
-    on how your</br>links are performing.
-    </p>
-    <input type="submit" value="Get Started" class="button-started" minlength="1">
-  </div>
-</div>
 
-<div class="input-shorted">
-  <form class="form-inline" role="form">
-    <div class="form-group"></div>
+  <div class="input-shorted">
+    <form class="form-inline" role="form">
+      <div class="form-group"></div>
       <input type="text" class="form-control" placeholder="Shorten a link here..." id="form-control">
-      <button type="button" value="Shorten it!" class="button-input" onclick="cortar()" id="form-button">Shorten it!</button>          
-      <p style="color:red; display:none; font-size: 1rem;" id="error">Please add a link!</p>   
-    </div>
-  </form>  
-</div>
-
-<div>
-  <div class="linea" id="linea"></div>
-  <div class="linea2" id="linea2"></div>
-  
-  <div class="containerSubheader2">
-    <h1 class="title">Advanced Statistics</h1>
-    <p class="subtitle">
-      Track how your links are performing <br> across the web with our advanced <br> statistics dashboard.</p>
+      <button type="button" value="Shorten it!" class="button-input" onclick="cortar()" id="form-button">Shorten
+        it!</button>
+      <p style="color:red; display:none; font-size: 1rem;" id="error">Please add a link!</p>
+    </form>
   </div>
 
-  <div class="cards">
-  
-    <div class="card">
-      <img src="./images/icon-brand-recognition.svg" alt="" class="imagen-icon">
-      <div class="contenedor-texto-card">
-        <h3>Brand Recognition</h3>
-        <p class="subtitle">
-          Bosst your brand recognition with <br>  each click. Generic links don`t <br> 
-          mean a thing.Branded links help <br> instill confidence in your content.
-        </p>
+  <div>
+    <div class="linea" id="linea"></div>
+    <div class="linea2" id="linea2"></div>
+
+    <div class="containerSubheader2">
+      <h1 class="title">Advanced Statistics</h1>
+      <p class="subtitle">
+        Track how your links are performing <br> across the web with our advanced <br> statistics dashboard.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="./images/icon-brand-recognition.svg" alt="" class="imagen-icon">
+        <div class="contenedor-texto-card">
+          <h3>Brand Recognition</h3>
+          <p class="subtitle">
+            Bosst your brand recognition with <br> each click. Generic links don`t <br>
+            mean a thing.Branded links help <br> instill confidence in your content.
+          </p>
         </div>
-    </div>
-    
-    <div class="card">
-      <img src="./images/icon-detailed-records.svg" alt="" class="imagen-icon">
-      <div class="contenedor-texto-card">
-        <h3>Detailed Records</h3>
-        <p class="subtitle">
-          Gain insights into who is clicking <br> your links. Knowing when and<br> 
-          where people engage with your <br>  content helps inform better<br> decisions.
-         </p>
       </div>
-    </div>
-  
-    <div class="card">
-      <img src="./images/icon-fully-customizable.svg" alt="" class="imagen-icon">
-      <div class="contenedor-texto-card">
-        <h3>Fully customizable</h3>
-        <p class="subtitle">
-          Improve brand awareness and<br> content discoverability through<br> 
-          customizable links, supercharging <br> audience engagement.
-         </p>
+
+      <div class="card">
+        <img src="./images/icon-detailed-records.svg" alt="" class="imagen-icon">
+        <div class="contenedor-texto-card">
+          <h3>Detailed Records</h3>
+          <p class="subtitle">
+            Gain insights into who is clicking <br> your links. Knowing when and<br>
+            where people engage with your <br> content helps inform better<br> decisions.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/icon-fully-customizable.svg" alt="" class="imagen-icon">
+        <div class="contenedor-texto-card">
+          <h3>Fully customizable</h3>
+          <p class="subtitle">
+            Improve brand awareness and<br> content discoverability through<br>
+            customizable links, supercharging <br> audience engagement.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
-
-
-
-
-
-<div class="boost-get">
-  <h2 class="booster">Boost your links today</h2>
-  <button type="button" class="button2" >Get Started</button>
-</div>
-
-<footer>    
-  <div class="container-footer">    
-     <img src="./images/logo-footer.svg" style="background-color: transparent;" class="shortly-footer">     
-     <div class="middleFooter">
-     <ul class="footer-list">
-      <li class="i" style="font-weight: bold;">Features</li>
-      <li class="i">Link Shortening</li>
-      <li class="i">Branded Links</li> 
-      <li class="i">Analytics</li> 
-     </ul>
-     
-     <ul class="footer-list">
-      <li class="i" style="font-weight: bold;">Resources</li>
-      <li class="i">Blog</li>
-      <li class="i">Developers</li> 
-      <li class="i">Support</li> 
-     </ul>
-
-     <ul class="footer-list">
-      <li class="i" style="font-weight: bold;">Company</li>
-      <li class="i">About</li>
-      <li class="i">Our Team</li> 
-      <li class="i">Careers</li> 
-      <li class="i">Contact</li> 
-     </ul>
-    </div>
-     <ul class="iconList">
-       <li><img src="./images/icon-facebook.svg" alt="" class="icon"></li>
-       <li><img src="./images/icon-twitter.svg" alt="" class="icon"></li>
-       <li><img src="./images/icon-pinterest.svg" alt="" class="icon"></li>
-       <li><img src="./images/icon-instagram.svg" alt="" class="icon"></li>
-     </ul>
+  <div class="boost-get">
+    <h2 class="booster">Boost your links today</h2>
+    <button type="button" class="button2">Get Started</button>
   </div>
-</footer>
 
-<script src="index.js"></script>
+  <footer>
+    <div class="container-footer">
+      <img src="./images/logo-footer.svg" style="background-color: transparent;" class="shortly-footer">
+      <div class="middleFooter">
+        <ul class="footer-list">
+          <li class="i" style="font-weight: bold;">Features</li>
+          <li class="i">Link Shortening</li>
+          <li class="i">Branded Links</li>
+          <li class="i">Analytics</li>
+        </ul>
+
+        <ul class="footer-list">
+          <li class="i" style="font-weight: bold;">Resources</li>
+          <li class="i">Blog</li>
+          <li class="i">Developers</li>
+          <li class="i">Support</li>
+        </ul>
+
+        <ul class="footer-list">
+          <li class="i" style="font-weight: bold;">Company</li>
+          <li class="i">About</li>
+          <li class="i">Our Team</li>
+          <li class="i">Careers</li>
+          <li class="i">Contact</li>
+        </ul>
+      </div>
+      <ul class="iconList">
+        <li><img src="./images/icon-facebook.svg" alt="" class="icon"></li>
+        <li><img src="./images/icon-twitter.svg" alt="" class="icon"></li>
+        <li><img src="./images/icon-pinterest.svg" alt="" class="icon"></li>
+        <li><img src="./images/icon-instagram.svg" alt="" class="icon"></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
