@@ -21,12 +21,11 @@ function mostrar() {
 }
 
 function cortar() {
-    var text =  `https://api.shrtco.de/v2/shorten?url=${form_control.value}`  
+    var text =  `https://api.shrtco.de/v2/shorten?url=${form_control.value}`;  
     const url = text
-    const http = new XMLHttpRequest()
-
-    http.open("GET", url)
-    http.send()
+    const http = new XMLHttpRequest();
+    http.open("GET", url);
+    http.send();
 
     if(text.length === 0){
         form_control.style.border = "4px solid red"
