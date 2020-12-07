@@ -211,6 +211,9 @@ p{
     background-color:  hsl(255, 11%, 22%);
 }
 
+.container-footer li{
+    align-self: center;
+}
 
 .footer-list{
     color: white;
@@ -275,6 +278,39 @@ h3 {
 }
 .element:hover{
     color: black;
+}
+
+#error{
+    margin-top: -5px;
+    margin-right: 53%;
+}
+
+@media(min-width: 1918px){
+    .containerSubheader2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .linea{
+        transform:rotate(90deg);
+        border-left: 6px solid hsl(180, 66%, 49%);
+        margin-top: 1643px;
+        margin-left: -213px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+    }
+    .linea2{
+        transform:rotate(90deg);
+        margin-top: 1643px;
+        margin-left: 213px;
+        border-left: 6px solid hsl(180, 66%, 49%);
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+    }
 }
 @media (min-width: 376px){
 
@@ -424,9 +460,16 @@ h3 {
     .middleFooter{
         display: flex;
     }
+
+    .container-footer li{
+        align-self: end;
+    }
+
     .bar{
         display: none;
     }
+
+    
         
     
     .form-inline{
@@ -462,12 +505,9 @@ h3 {
         justify-content: space-around;
         align-items: center;
         margin-top: -100px;
+
     }
   
-
-    /*.cards > .card{
-        margin-top: 1000px;
-    }*/
 
     .card:nth-child(2){
         margin-top: 100px;
@@ -493,6 +533,10 @@ h3 {
 
     .containerSubheader2{
         margin-top: 20%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+     
     }
     
     .title{
