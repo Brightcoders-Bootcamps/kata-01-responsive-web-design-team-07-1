@@ -9,6 +9,7 @@ const error = document.getElementById('error')
 const links = document.getElementById('links')
 
 
+
 function mostrar() {
     if(navMenu.style.display == "") {
         navMenu.style.display = "flex"
@@ -36,7 +37,8 @@ function cortar() {
         form_control.style.border = "4px solid red"
         error.style.display = "block"
     }else if (form_control.value.length > 0 ){
-        form_control.style.border="none"
+        error.style.display = "none"
+        form_control.style.border = "none"
         http.onreadystatechange = (e) => {  
             
             if(http.responseText != ""){

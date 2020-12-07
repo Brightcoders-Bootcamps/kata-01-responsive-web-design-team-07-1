@@ -496,25 +496,31 @@ h3 {
         padding-top: 1rem;
     }
   
-    .card{
-        width: 25%;
-        
-    }
+ 
     .cards{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: -100px;
+        margin-top: -6px;
 
     }
   
+    .card:nth-child(1){
+       position: absolute;
+       left: 10%;
+       margin-top: -88px;
+    }
 
     .card:nth-child(2){
         margin-top: 100px;
+        position: relative;
+        left: 114%;
     }
 
     .card:nth-child(3){
-        margin-top: 200px;
+        
+        position: absolute;
+        
     }
 
     .header{
@@ -556,11 +562,11 @@ h3 {
     }
 
     .linea{
-        transform:rotate(90deg);
-        margin-top: 1643px;
+        transform: rotate(90deg);
+        margin-top: 1637px;
         margin-left: -221px;
         border-left: 6px solid hsl(180, 66%, 49%);
-        height: 77px;
+        height: 119px;
         position: absolute;
         left: 50%;
         top: 0;
@@ -571,7 +577,7 @@ h3 {
         margin-top: 1643px;
         margin-left: 213px;
         border-left: 6px solid hsl(180, 66%, 49%);
-        height: 77px;
+        height: 110px;
         position: absolute;
         left: 50%;
         top: 0;
