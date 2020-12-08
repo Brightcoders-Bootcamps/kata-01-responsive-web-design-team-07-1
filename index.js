@@ -46,14 +46,16 @@ function cortar() {
             if(http.responseText != ""){
 
                 if(cont % 2 == 0){
-
+                    
                     const json = JSON.parse(http.responseText)
-
+                    const div_elemento =document.createElement('div')
                     const original_link = document.createElement('p')
                     const line_card = document.createElement('hr')
                     const new_link = document.createElement('a')
                     const button = document.createElement('button')
                     const line_end = document.createElement('hr')
+
+                    links.appendChild(div_elemento)
                    
 
                     original_link.innerHTML = form_control.value
@@ -65,12 +67,13 @@ function cortar() {
                     original_link.ClassName="link-original"
                     line_card.className="bar2"
                     button.className = "button-input"
-                    line_end.className="bar3" 
-                    //button.id = "b" + cont
-
-                    
+                    line_end.className="bar3"
+                    div_elemento.className="div_elemento"
+                    div_elemento.style.background="white"
+                    //div_elemento.style.padding="2rem"
+                    //div_elemento.style.margin="2rem"
                     button.onclick = function copiar() {
-                        console.log("HOLA")
+                        
                         //const new_link_2 = document.getElementById("nl" + cont)
                         const text_area = document.createElement('textarea')
                         document.body.appendChild(text_area)
@@ -83,11 +86,11 @@ function cortar() {
                         button.style.backgroundColor="#3D3357";
                     }
                   
-                    links.appendChild(original_link)
-                    links.appendChild(line_card)
-                    links.appendChild(new_link)
-                    links.appendChild(button)
-                    links.appendChild(line_end)
+                    div_elemento.appendChild(original_link)
+                    div_elemento.appendChild(line_card)
+                    div_elemento.appendChild(new_link)
+                    div_elemento.appendChild(button)
+                  //  div_elemento.appendChild(line_end)
                     
                    
                     console.log(json.result.short_link)
