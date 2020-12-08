@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
+.body{
+    max-width: 375px;
+    width: 100%;
+}
 .mobileMenu{
     display: flex;
     justify-content: space-between;
@@ -382,7 +386,11 @@ h3 {
     }
 }
 @media (min-width: 376px){
-
+    .body{
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+    }
     .logo{
         margin-top: 50px;
         margin-left: 100px;
@@ -658,6 +666,7 @@ h3 {
         border: none;
         margin-top: 13%;
         position: absolute;
+        z-index: 100;
     }
 
     .containerSubheader2{
@@ -665,7 +674,7 @@ h3 {
         display:flex;
         justify-content: space-between;
         align-items: center;
-     
+        z-index: 1;
     }
     
     .title{
