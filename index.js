@@ -16,12 +16,14 @@ function mostrar() {
         working.style.display = "none"
         linea.style.marginTop = "1600px"
         linea2.style.marginTop = "1988px"
-    } else{
+
+          } else{
         navMenu.style.display = ""
         working.style.display = "block"
         linea.style.marginTop = "1585px"
         linea2.style.marginTop = "1973px"
-    }
+    
+          }
 }
 
 cont = 0
@@ -48,16 +50,22 @@ function cortar() {
                     const json = JSON.parse(http.responseText)
 
                     const original_link = document.createElement('p')
+                    const line_card = document.createElement('hr')
                     const new_link = document.createElement('a')
                     const button = document.createElement('button')
+                    const line_end = document.createElement('hr')
+                   
 
                     original_link.innerHTML = form_control.value
                     new_link.innerHTML = json.result.short_link
                     button.innerHTML = "Copy"
-
                     new_link.href = "http://" + json.result.short_link
-    
+                   
+
+                    original_link.ClassName="link-original"
+                    line_card.className="bar2"
                     button.className = "button-input"
+                    line_end.className="bar3" 
                     //button.id = "b" + cont
 
                     
@@ -71,14 +79,17 @@ function cortar() {
                         console.log(text_area.value)
                         document.execCommand("copy")
                         document.body.removeChild(text_area)
+                        button.innerHTML = "Copied!"
+                        button.style.backgroundColor="#3D3357";
                     }
-
+                  
                     links.appendChild(original_link)
+                    links.appendChild(line_card)
                     links.appendChild(new_link)
                     links.appendChild(button)
-
-
+                    links.appendChild(line_end)
                     
+                   
                     console.log(json.result.short_link)
                 }
                 cont++
